@@ -56,7 +56,17 @@ cp $LP_DIR/conf/php.ini php
 
 env
 touch www/js/config/config.js
-echo "hello" >> www/js/config/config.js
+cat >> www/js/config/config.js
+module.exports = {
+  "APP_STORE_URL": ENV['APP_STORE_URL'],
+  "AWS_CALLBACK_URL": "http://localhost:3000/",
+  "AWS_ACCESS_KEY_ID": "AKIAJW4MLZOUAP6AIM5Q",
+  "AWS_SECRET_ACCESS_KEY": "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",
+  "AWS_MAX_FILE_SIZE": 10000000,
+  "AWS_ART_UPLOAD_BUCKET": "teesforthepeople",
+  "AWS_ART_UPLOAD_BUCKET_REGION": "s3"
+};
+<<EOF
 
 # make php available on bin
 mkdir -p bin
