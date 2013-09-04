@@ -55,6 +55,7 @@ cp $LP_DIR/conf/httpd.conf $APACHE_PATH/conf
 cp $LP_DIR/conf/php.ini php
 
 echo `pwd`
+echo `ls`
 
 # make php available on bin
 mkdir -p bin
